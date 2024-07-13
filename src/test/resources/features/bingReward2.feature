@@ -10,7 +10,7 @@ Feature: Reward Bing
 
 
   @BingReward1
-  Scenario: Bing Reward
+  Scenario: Bing Reward 1
     And user input bing reward
     And user enters click
     Then bing reward success

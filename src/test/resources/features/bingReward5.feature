@@ -9,7 +9,7 @@ Feature: Reward Bing
     And user input password "10Juli2002"
 
   @BingReward4
-  Scenario: Bing Reward
+  Scenario: Bing Reward 4
     And user input bing reward
     And user enters click
     Then bing reward success
