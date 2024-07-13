@@ -8,7 +8,6 @@ Feature: Reward Bing
     And user input email "aembarkembar@gmail.com"
     And user input password "25April2011"
 
-#  Scenario Outline: Bing Reward
   @BingReward
   Scenario: Bing Reward
     And user input bing reward

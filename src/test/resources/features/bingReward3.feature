@@ -5,10 +5,10 @@ Feature: Reward Bing
 
   Background:
     Given user is on the login page
-    And user input email "aembarkembar@gmail.com"
-    And user input password "25April2011"
+    And user input email "donboskokian787@gmail.com"
+    And user input password "15Juli1962"
 
-  @BingReward
+  @BingReward2
   Scenario: Bing Reward
     And user input bing reward
     And user enters click
