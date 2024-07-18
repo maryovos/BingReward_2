@@ -1,5 +1,8 @@
 package pageobjects;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 import net.serenitybdd.core.pages.WebElementFacade;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,12 +15,15 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+@Slf4j
 public class LoginPage extends BasePage {
 
-   
+    private static final ObjectMapper mapper = new ObjectMapper();
+
     @FindBy(css = "input[name='username']")
     private WebElementFacade usernameTf;
 
@@ -159,42 +165,48 @@ public class LoginPage extends BasePage {
 
     inputBingReward()
     {
-
         List<String> keyword = ListKeywordBingReward();
-        System.out.println("Keyword Size : " + keyword);
-
+        log.info("Keyword Size : " + keyword);
 
         firstSearch(keyword.get(0));
         secondSearch(keyword);
-
-
     }
 
     public List<String> ListKeywordBingReward() {
+        List<String> result = new ArrayList<>();
 
         HttpRequest httpRequest = HttpRequest.newBuilder()
                 .uri(URI.create("https://random-word-api.herokuapp.com/word?number=30"))
                 .method("GET", HttpRequest.BodyPublishers.noBody())
                 .build();
 
-        HttpResponse<String> response = null;
-
         try {
-            response = HttpClient.newHttpClient().send(httpRequest, HttpResponse.BodyHandlers.ofString());
-
-        } catch (IOException e) {
-
-
-            e.printStackTrace();
-        } catch (InterruptedException e) {
+            HttpResponse<String> response = HttpClient.newHttpClient().send(httpRequest, HttpResponse.BodyHandlers.ofString());
+            result = Arrays.stream(response.body().split(",")).toList();
+        } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
 
+        return result;
+    }
 
-        List<String> result = Arrays.stream(response.body().split(",")).toList();
+    public List<String> ListKeywordBingReward2() {
+        List<String> result = new ArrayList<>();
+
+        HttpRequest httpRequest = HttpRequest.newBuilder()
+                .uri(URI.create("https://random-word-api.herokuapp.com/word?number=30"))
+                .method("GET", HttpRequest.BodyPublishers.noBody())
+                .build();
+
+        try {
+            HttpResponse<String> response = HttpClient.newHttpClient().send(httpRequest, HttpResponse.BodyHandlers.ofString());
+            JsonNode resp = mapper.readTree(response.body());
+            result = mapper.readerForListOf(String.class).readValue(resp);
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
 
         return result;
-
     }
 
     public void firstSearch (String firstKeyword)  {
