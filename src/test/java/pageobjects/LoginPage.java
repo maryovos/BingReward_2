@@ -209,6 +209,42 @@ public class LoginPage extends BasePage {
         return result;
     }
 
+    public List<String> ListKeywordBingRewardHardCode() {
+        List<String> keywordList = new ArrayList<>();
+        keywordList.add("bottle");
+        keywordList.add("water");
+        keywordList.add("laptop");
+        keywordList.add("keyboard");
+        keywordList.add("mouce");
+        keywordList.add("sheep");
+        keywordList.add("snake");
+        keywordList.add("giraffe");
+        keywordList.add("elephant");
+        keywordList.add("jaguar");
+        keywordList.add("tiger");
+        keywordList.add("lion");
+        keywordList.add("hyena");
+        keywordList.add("birds");
+        keywordList.add("cendrawasih");
+        keywordList.add("shark");
+        keywordList.add("doplhin");
+        keywordList.add("deer");
+        keywordList.add("pig");
+        keywordList.add("dog");
+        keywordList.add("cat");
+        keywordList.add("ant");
+        keywordList.add("bear");
+        keywordList.add("horse");
+        keywordList.add("donkey");
+        keywordList.add("monkey");
+        keywordList.add("spider");
+        keywordList.add("bat");
+        keywordList.add("sardine");
+        keywordList.add("salmon");
+
+        return keywordList;
+    }
+
     public void firstSearch (String firstKeyword)  {
 
         try {
