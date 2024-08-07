@@ -8,7 +8,7 @@ Feature: Reward Bing
     And user input email "jeffhendersonnn7@gmail.com"
     And user input password "5Agustus1999"
 
-  @BingReward3
+  @BingReward2
   Scenario: Bing Reward
     And user input bing reward
     And user enters click
