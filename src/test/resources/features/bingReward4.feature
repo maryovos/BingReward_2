@@ -6,7 +6,7 @@ Feature: Reward Bing
   Background:
     Given user is on the login page
     And user input email "maryosina7129@gmail.com"
-    And user input password "160300Mar"
+    And user input password "13Maret1999"
 
   @BingReward3
   Scenario: Bing Reward
