@@ -165,7 +165,8 @@ public class LoginPage extends BasePage {
 
     inputBingReward()
     {
-        List<String> keyword = ListKeywordBingReward();
+//        List<String> keyword = ListKeywordBingReward();
+        List<String> keyword = ListKeywordBingReward2();
         log.info("Keyword Size : " + keyword);
 
         firstSearch(keyword.get(0));

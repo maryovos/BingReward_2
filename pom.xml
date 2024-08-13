@@ -94,7 +94,6 @@
                     <threadCount>2</threadCount>
                     <forkCount>2C</forkCount>
 
-
                 </configuration>
                 <executions>
                     <execution>
@@ -140,7 +139,26 @@
                 </executions>
             </plugin>
 
+            <!-- Parallel -->
+            <plugin>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <configuration>
+                    <includes>
+                        <include>**/runner/*.java</include>
+                    </includes>
+                    <parallel>methods</parallel>
+                    <useUnlimitedThreads>true</useUnlimitedThreads>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
-
 </project>
