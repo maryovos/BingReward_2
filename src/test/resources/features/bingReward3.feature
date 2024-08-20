@@ -9,7 +9,7 @@
    And user input password "5Agustus1999"
 
   @BingReward2
-  Scenario: Bing Reward
+  Scenario: Bing Reward 9
     And user input bing reward
     And user enters click
     Then bing reward success
