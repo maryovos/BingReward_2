@@ -6,7 +6,7 @@
  Background:
    Given user is on the login page
    And user input email "maryosina16@gmail.com"
-   And user input password "5Agustus1999"
+   And user input password "16Desember1999"
 
   @BingReward2
   Scenario: Bing Reward 9

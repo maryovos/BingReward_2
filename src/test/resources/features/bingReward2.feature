@@ -19,4 +19,14 @@ Feature: Reward Bing
     And user input password "27Juni1999"
     And user input bing reward
     And user enters click
-    Then bing reward success    
+    Then bing reward success
+
+  @BingReward1
+  Scenario: Bing Reward 11
+    Given user is on the login page
+    And user input email "untukdipakai73@gmail.com"
+    And user input password "4Agustus2000"
+    And user input bing reward
+    And user enters click
+    Then bing reward success
+

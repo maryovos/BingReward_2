@@ -15,3 +15,7 @@ W
 'src/test/java/pageobjects/BasePage.java,5\5\55aefca04ab54c529c17c2c42186900673188dc1
 U
 %src/test/java/utilities/BaseTest.java,d\5\d55ddac6d395dfd54aa544113d308be923c221a8
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+X
+(src/test/java/pageobjects/LoginPage.java,1\f\1f16143521526397dbe4f4b9240ed45266946dcd

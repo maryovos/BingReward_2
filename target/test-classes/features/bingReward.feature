@@ -5,8 +5,8 @@ Feature: Reward Bing
 
   Background:
     Given user is on the login page
-    And user input email "maryosina18@gmail.com"
-    And user input password "4Agustus2000"
+    And user input email "keflin.willa@gmail.com"
+    And user input password "1a2b3c4d5E;"
 
   @BingReward
   Scenario: Bing Reward

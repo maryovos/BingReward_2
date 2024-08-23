@@ -192,7 +192,7 @@ public class LoginPage extends BasePage {
         List<String> result = new ArrayList<>();
 
         HttpRequest httpRequest = HttpRequest.newBuilder()
-                .uri(URI.create("https://random-word-api.herokuapp.com/word?number=30"))
+                .uri(URI.create("https://random-word-api.herokuapp.com/word?number=5"))
                 .method("GET", HttpRequest.BodyPublishers.noBody())
                 .build();
 
